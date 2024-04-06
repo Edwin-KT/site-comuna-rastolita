@@ -87,6 +87,7 @@ header h1 {
 
 .info-item {
   margin-bottom: 20px;
+  margin-left: 20px;
 }
 
 .info-item h3 {
@@ -280,7 +281,7 @@ main {
   }
 
   .header-image {
-    height: auto;
+    height: 40%;
   }
 
   .center-wrapper {
