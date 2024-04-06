@@ -1,4 +1,4 @@
-// Funcția pentru animarea progresivă a valorilor
+// Functia pentru animarea progresiva a valorilor
 function animateNumber(element, start, end, duration) {
   let range = end - start;
   let current = start;
@@ -16,7 +16,7 @@ function animateNumber(element, start, end, duration) {
   }, stepTime);
 }
 
-// Verificăm dacă utilizatorul a ajuns la secțiunea cu suprafață și populație
+// Verific daca utilizatorul a ajuns la sectiunea cu suprafata si populatie
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
   return (
@@ -28,24 +28,23 @@ function isInViewport(element) {
   );
 }
 
-// Apelarea funcției pentru suprafață și populație când utilizatorul ajunge la secțiunea respectivă
+// Apelarea functiei pentru suprafata si populatie cand utilizatorul ajunge la sectiunea respectiva
 document.addEventListener("DOMContentLoaded", function () {
   const suprafataValoare = document.getElementById("suprafata-valoare");
   const populatieValoare = document.getElementById("populatie-valoare");
   const suprafataSection = document.getElementById("suprafata-populatie");
 
-  // Valori reale ale suprafeței și populației
-  const suprafataReal = 266; // presupunem 150 km²
-  const populatieReal = 1169; // presupunem 5000 locuitori
+  const suprafataReal = 266;
+  const populatieReal = 1169;
 
-  // Animare progresivă a valorilor când utilizatorul ajunge la secțiune
+  // Animare progresiva a valorilor cand utilizatorul ajunge la sectiune
   function startAnimations() {
     animateNumber(suprafataValoare, 0, suprafataReal, 2000);
     animateNumber(populatieValoare, 0, populatieReal, 2000);
     window.removeEventListener("scroll", checkViewport);
   }
 
-  // Verific în mod continuu dacă secțiunea cu suprafață și populație este în vizualizare
+  // Verific in mod continuu daca sectiunea cu suprafata si populatie este in vizualizare
   function checkViewport() {
     if (isInViewport(suprafataSection)) {
       startAnimations();
@@ -55,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", checkViewport);
 });
 
-// Evenimente pentru butoanele expand
+//functie pt butonul de plus pe pagina principala
 document.addEventListener("DOMContentLoaded", function () {
   const expandBtns = document.querySelectorAll(".expand-btn");
 
@@ -68,6 +67,25 @@ document.addEventListener("DOMContentLoaded", function () {
         this.textContent = "+";
       } else {
         details.style.display = "block";
+        this.textContent = "-";
+      }
+    });
+  });
+});
+
+//functie pt butonul de plus pe pagina de formulare
+document.addEventListener("DOMContentLoaded", function () {
+  const expandBtns = document.querySelectorAll(".expand-btn-formulare");
+
+  expandBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const details = this.nextElementSibling;
+
+      if (details.classList.contains("show")) {
+        details.classList.remove("show");
+        this.textContent = "+";
+      } else {
+        details.classList.add("show");
         this.textContent = "-";
       }
     });

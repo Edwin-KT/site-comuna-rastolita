@@ -89,7 +89,7 @@ header h1 {
 }
 
 .info-item h3 {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: #223a3a;
 }
 
@@ -105,8 +105,27 @@ header h1 {
   margin-right: 10px;
 }
 
-.details {
+.expand-btn-formulare {
+  background-color: #223a3a;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.info-item .details {
   display: none;
+  margin: 2%;
+}
+
+.info-item .details.show {
+  display: flex;
+  flex-direction: column;
 }
 
 .center-wrapper {
@@ -174,8 +193,9 @@ main {
 }
 
 #logo {
-  width: 3%;
+  width: 20%;
   margin: 5px;
+  margin-left: 0px;
 }
 
 #bun-venit {
@@ -243,6 +263,79 @@ main {
   margin-right: 10px;
 }
 
-.details {
-  margin: 2%;
+@media only screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+
+  .header-image {
+    height: auto;
+  }
+
+  .center-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #bun-venit {
+    width: 90%;
+    margin-top: 30%;
+    font-size: 1.2rem;
+  }
+
+  #baieti {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .baiat {
+    width: 90%;
+  }
+
+  .titluri-functii {
+    font-size: 16px;
+  }
+
+  #locuri {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .atractie {
+    width: 90%;
+  }
+
+  .imagini-locuri {
+    width: 100%;
+    height: auto;
+  }
+
+  #text-asezare {
+    width: 90%;
+  }
+
+  .tabele {
+    margin-bottom: 20px;
+  }
+
+  #bun-venit {
+    width: 90%;
+    margin-top: 20%;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+.formulare-dropdown {
+  padding-left: 3%;
 }
