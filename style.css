@@ -22,6 +22,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
 }
 
 nav ul {
@@ -263,9 +264,9 @@ main {
   margin-right: 10px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1280px) {
   header {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
 
@@ -287,12 +288,6 @@ main {
     align-items: center;
   }
 
-  #bun-venit {
-    width: 90%;
-    margin-top: 30%;
-    font-size: 1.2rem;
-  }
-
   #baieti {
     flex-direction: column;
     align-items: center;
@@ -312,7 +307,7 @@ main {
   }
 
   .atractie {
-    width: 90%;
+    width: 40%;
   }
 
   .imagini-locuri {
@@ -334,8 +329,7 @@ main {
     font-size: 1rem;
     text-align: center;
   }
-}
-
-.formulare-dropdown {
-  padding-left: 3%;
+  #logo {
+    width: 30%;
+  }
 }
